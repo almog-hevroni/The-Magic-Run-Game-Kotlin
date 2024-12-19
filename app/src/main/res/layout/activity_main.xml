@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_magicBackround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/magic_backround" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/heart_container"
+        android:layout_width="@dimen/heart_layout_wight"
+        android:layout_height="@dimen/heart_dimens"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/heart_dimens"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/heart_dimens"
+            android:layout_marginHorizontal="@dimen/heart_margin"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/heart_dimens"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/game_matrix"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/heart_container"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <!-- Column 1 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/matrix_column_1"
+            android:layout_width="@dimen/col_layout_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="7">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_0_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_1_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_2_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_3_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_4_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_5_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_6_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Column 2 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/matrix_column_2"
+            android:layout_width="@dimen/col_layout_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="7">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_0_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_6_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Column 3 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/matrix_column_3"
+            android:layout_width="@dimen/col_layout_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="7">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_0_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_6_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_layout_height"
+                android:layout_margin="@dimen/cell_layout_margin"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bad_witch" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_BTN_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_margin"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:importantForAccessibility="no"
+        app:icon="@drawable/arrow_square_left" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_BTN_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_margin"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:importantForAccessibility="no"
+        app:icon="@drawable/arrow_square_right" />
+
+</RelativeLayout>
