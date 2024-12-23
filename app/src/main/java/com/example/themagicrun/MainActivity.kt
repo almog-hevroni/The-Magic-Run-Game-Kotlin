@@ -188,7 +188,6 @@ class MainActivity : AppCompatActivity() {
             timer.cancel()
         }
     }
-
     override fun onPause() {
         super.onPause()
         stopTimer()
