@@ -188,6 +188,7 @@ class MainActivity : AppCompatActivity() {
             timer.cancel()
         }
     }
+
     override fun onPause() {
         super.onPause()
         stopTimer()
@@ -204,5 +205,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         stopTimer()
     }
+
 }
 
