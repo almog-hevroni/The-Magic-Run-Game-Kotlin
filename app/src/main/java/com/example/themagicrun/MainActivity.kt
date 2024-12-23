@@ -188,5 +188,22 @@ class MainActivity : AppCompatActivity() {
             timer.cancel()
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        stopTimer()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (!gameManager.isGameOver) {
+            startObstaclesMovement()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        stopTimer()
+    }
 }
 
