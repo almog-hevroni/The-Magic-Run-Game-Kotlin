@@ -1,66 +1,132 @@
-# The Magic Run 🧙‍♂️
+# Magic Run 🎮✨
+
+A magical obstacle avoidance game where players control a magician to dodge evil witches and collect magical hats.
 
 ## Description
-The Magic Run is an engaging Android obstacle avoidance game where players control a magician who must dodge evil witches falling from above. Test your reflexes and magical abilities as you navigate through increasingly challenging patterns of obstacles!
 
-## Game Features
-- Simple yet addictive gameplay mechanics
-- Intuitive controls with left and right movement
-- Health system with three lives
-- Dynamic obstacle generation
-- Vibration feedback on collisions
-- Magical themed graphics and UI
+Magic Run is an Android game where players control a magician character who must navigate through a field of obstacles. The game features both harmful obstacles (witches) that must be avoided and beneficial ones (magic hats) that should be collected for points.
 
-## How to Play
-1. **Start**: Launch the game to begin your magical adventure
-2. **Controls**: 
-   - Tap the left arrow button to move left
-   - Tap the right arrow button to move right
-3. **Objective**: Avoid colliding with the falling witch obstacles
-4. **Lives**: 
-   - You start with 3 lives (represented by hearts)
-   - Each collision with a witch reduces your lives by 1
-   - The game ends when you lose all lives
+## Features
 
-## Game Mechanics
-- **Player Character**: A magician fixed at the bottom of the screen
-- **Obstacles**: Evil witches that fall from the top of the screen
-- **Movement**: Horizontal movement across three lanes
-- **Collision System**: 
-  - Includes a brief invulnerability period after each hit
-  - Triggers vibration feedback
-  - Displays a warning message
-- **Obstacle Generation**:
-  - 60% chance of new obstacle generation
-  - Guarantees at least one safe path is always available
+### Game Modes
+- **Button Controls**: Traditional control scheme using left/right buttons
+- **Sensor Controls**: Tilt your device to move the magician
+  - Tilt left/right to move
+  - Tilt forward/backward to adjust game speed
 
-## Technical Features
-- Built for Android using Android Studio
-- Implements custom collision detection system
-- Uses Timer for obstacle movement
-- Includes vibration feedback system
-- Contains game over screen with status message
-- Automatic activity transition on game end
+### Difficulty Levels
+- **Easy**: Slower obstacle movement for beginners
+- **Hard**: Faster-paced gameplay for experienced players
 
-## Requirements
-- Android device or emulator
-- Minimum SDK version: As specified in build.gradle
-- Vibration permission enabled
+### Gameplay Elements
+- Three lives represented by magic wands
+- Score tracking system
+- Obstacle variety:
+  - Evil witches (harmful) - Cost one life on collision
+  - Magic hats (beneficial) - Award 10 points when collected
+- Dynamic speed adjustment in sensor mode
 
-## Installation
+### Additional Features
+- High score tracking
+- Location-based score recording
+- Interactive score map
+- Sound effects and vibration feedback
+
+## Technical Specifications
+
+### Requirements
+- Android SDK 26 or higher (Android 8.0+)
+- Google Play Services for Maps
+- Location permissions for score tracking
+
+### Dependencies
+```gradle
+implementation 'androidx.core:core-ktx'
+implementation 'androidx.appcompat:appcompat'
+implementation 'com.google.android.material:material'
+implementation 'com.google.android.gms:play-services-maps:18.2.0'
+implementation 'com.google.android.gms:play-services-location:21.1.0'
+implementation 'com.google.code.gson:gson:2.10.1'
+implementation 'androidx.recyclerview:recyclerview:1.3.0'
+```
+
+### Key Components
+1. **Game Logic**
+   - `GameBoard`: Manages the game grid and obstacle placement
+   - `PlayerManager`: Handles player movement and position
+   - `ObstacleManager`: Controls obstacle generation and movement
+   - `GameTimer`: Manages game speed and updates
+   - `GameManager`: Controls core game mechanics including:
+     - Life management
+     - Score tracking
+     - Collision detection
+     - Sound effects
+     - Vibration feedback
+     - Game over conditions
+
+2. **UI Components**
+   - Custom layouts for game board
+   - Material Design components
+   - Dynamic score display
+   - Life indicator system
+
+3. **Data Management**
+   - SharedPreferences for score storage
+   - Location tracking for score mapping
+   - High score leaderboard system
+
+## First Launch
+
+When you first launch the application, you'll be prompted to grant location permissions. This is necessary for:
+- Recording the location of your high scores
+- Displaying scores on the interactive map
+- Enhanced leaderboard functionality
+
+You can choose to:
+- Allow location access for full game features
+- Deny location access (some features will be limited)
+
+## Setup Instructions
+
 1. Clone the repository
 2. Open the project in Android Studio
-3. Build and run on your Android device or emulator
+3. Add your Google Maps API key in the AndroidManifest.xml:
+   ```xml
+   <meta-data
+       android:name="com.google.android.geo.API_KEY"
+       android:value="YOUR_API_KEY"/>
+   ```
+4. Build and run the project
 
-## Game Over
-The game ends when all three lives are lost, displaying a "Magic Failed!" message and transitioning to the game over screen after 5 seconds.
+## Permissions Required
+- `VIBRATE`: For haptic feedback
+- `ACCESS_FINE_LOCATION`: For score location tracking
+- `ACCESS_COARSE_LOCATION`: For approximate location data
 
-## Development
-The game is structured using several key components:
-- MainActivity: Main game logic and UI
-- GameOverActivity: Handles game end state
-- SignalManager: Manages vibrations and toast messages
-- Custom layouts for both game and game over screens
+## Game Controls
+
+### Button Mode
+- Tap left button to move left
+- Tap right button to move right
+
+### Sensor Mode
+- Tilt device left to move left
+- Tilt device right to move right
+- Tilt forward to increase speed
+- Tilt backward to decrease speed
+
+## Development Notes
+
+- Built using Kotlin
+- Follows MVVM architecture pattern
+- Uses Material Design components
+- Implements fragment-based UI for score display
+- Utilizes Google Maps API for location features
 
 ## Credits
-Created using Android Studio and Kotlin
+
+Developed as a learning project using Android Studio and Kotlin.
+
+## License
+
+This project is open for educational purposes.
