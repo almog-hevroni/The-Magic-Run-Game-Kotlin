@@ -3,8 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#5F826C90</color>
-    <color name="main_game_over_backround_color">#7E9491</color>
+    <color name="main_game_backround_color">#7E9491</color>
     <color name="game_over_text_backround_color">#7E9491</color>
-    <color name="game_over_text_color">#FFFFA7</color>
+    <color name="game_over_text_color">#2E2E2B</color>
+    <color name="selected_button">#CE93D8</color>
+    <color name="unselected_button">#908B8B</color>
+    <color name="primary_color">#6200EE</color>
+    <color name="stroke_color">#E0E0E0</color>
 
 </resources>
